@@ -1,0 +1,9 @@
+[submodule "olua"]
+	path = olua
+	url = https://github.com/zhongfq/olua.git
+[submodule "lua"]
+	path = lua
+	url = https://github.com/zhongfq/lua.git
+[submodule "OpenXLSX"]
+	path = OpenXLSX
+	url = https://github.com/troldal/OpenXLSX.git

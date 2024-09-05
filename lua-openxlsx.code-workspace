@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.jsfl": "javascript",
+			"*.manifest": "json",
+			"__node_handle": "cpp"
+		}
+	}
+}

@@ -9,9 +9,6 @@ local XLFormulaProxy = {}
 ---@return any
 function XLFormulaProxy:__gc() end
 
----@return any
-function XLFormulaProxy:__olua_move() end
-
 ---Clear the formula.
 ---@return openxlsx.XLFormulaProxy # Return a reference to the cleared object.
 function XLFormulaProxy:clear() end

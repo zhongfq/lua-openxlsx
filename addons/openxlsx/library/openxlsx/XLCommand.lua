@@ -8,9 +8,6 @@ local XLCommand = {}
 ---@return any
 function XLCommand:__gc() end
 
----@return any
-function XLCommand:__olua_move() end
-
 ---
 ---\tparam T
 ---@param param string # 

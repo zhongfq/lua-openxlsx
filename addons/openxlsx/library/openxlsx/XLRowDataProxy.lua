@@ -9,9 +9,6 @@ local XLRowDataProxy = {}
 ---@return any
 function XLRowDataProxy:__gc() end
 
----@return any
-function XLRowDataProxy:__olua_move() end
-
 ---Clears all values for the current row.
 function XLRowDataProxy:clear() end
 

@@ -16,9 +16,6 @@ local XLXmlData = {}
 ---@return any
 function XLXmlData:__gc() end
 
----@return any
-function XLXmlData:__olua_move() end
-
 ---Access the parent XLDocument object.
 ---@return openxlsx.XLDocument # A pointer to the parent XLDocument object.
 function XLXmlData:getParentDoc() end

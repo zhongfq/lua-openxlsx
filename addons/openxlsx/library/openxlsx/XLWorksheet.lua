@@ -10,9 +10,6 @@ local XLWorksheet = {}
 ---@return any
 function XLWorksheet:__gc() end
 
----@return any
-function XLWorksheet:__olua_move() end
-
 ---
 ---@param ref string # 
 ---@return openxlsx.XLCellAssignable # 

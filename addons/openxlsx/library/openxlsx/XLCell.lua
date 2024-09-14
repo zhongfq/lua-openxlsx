@@ -9,9 +9,6 @@ local XLCell = {}
 ---@return any
 function XLCell:__gc() end
 
----@return any
-function XLCell:__olua_move() end
-
 ---get the XLCellReference object for the cell.
 ---@return openxlsx.XLCellReference # A reference to the cells' XLCellReference object.
 function XLCell:cellReference() end

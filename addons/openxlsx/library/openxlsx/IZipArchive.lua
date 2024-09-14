@@ -12,9 +12,6 @@ local IZipArchive = {}
 ---@return any
 function IZipArchive:__gc() end
 
----@return any
-function IZipArchive:__olua_move() end
-
 ---@param name string
 ---@param data string
 function IZipArchive:addEntry(name, data) end

@@ -9,9 +9,6 @@ local XLColumn = {}
 ---@return any
 function XLColumn:__gc() end
 
----@return any
-function XLColumn:__olua_move() end
-
 ---Is the column hidden?
 ---@return boolean # The state of the column.
 function XLColumn:isHidden() end

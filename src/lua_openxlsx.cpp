@@ -5,23 +5,13 @@
 #include "OpenXLSX.hpp"
 #include "olua.hpp"
 
-static int _olua_fun_OpenXLSX_XLCommandType___call(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    olua_pushenum(L, olua_checkinteger(L, -1));
-
-    olua_endinvoke(L);
-
-    return 1;
-}
+static int _olua_module_openxlsx(lua_State *L);
 
 static int _olua_cls_openxlsx_XLCommandType(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCommandType>(L, "openxlsx.XLCommandType");
     oluacls_func(L, "__index", olua_indexerror);
     oluacls_func(L, "__newindex", olua_newindexerror);
-    oluacls_func(L, "__call", _olua_fun_OpenXLSX_XLCommandType___call);
     oluacls_enum(L, "AddChartsheet", (lua_Integer)OpenXLSX::XLCommandType::AddChartsheet);
     oluacls_enum(L, "AddSharedStrings", (lua_Integer)OpenXLSX::XLCommandType::AddSharedStrings);
     oluacls_enum(L, "AddWorksheet", (lua_Integer)OpenXLSX::XLCommandType::AddWorksheet);
@@ -42,7 +32,7 @@ static int _olua_cls_openxlsx_XLCommandType(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLCommandType(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLCommandType")) {
         luaL_error(L, "class not found: OpenXLSX::XLCommandType");
     }
@@ -50,23 +40,11 @@ OLUA_LIB int luaopen_openxlsx_XLCommandType(lua_State *L)
 }
 OLUA_END_DECLS
 
-static int _olua_fun_OpenXLSX_XLContentType___call(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    olua_pushenum(L, olua_checkinteger(L, -1));
-
-    olua_endinvoke(L);
-
-    return 1;
-}
-
 static int _olua_cls_openxlsx_XLContentType(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLContentType>(L, "openxlsx.XLContentType");
     oluacls_func(L, "__index", olua_indexerror);
     oluacls_func(L, "__newindex", olua_newindexerror);
-    oluacls_func(L, "__call", _olua_fun_OpenXLSX_XLContentType___call);
     oluacls_enum(L, "CalculationChain", (lua_Integer)OpenXLSX::XLContentType::CalculationChain);
     oluacls_enum(L, "Chart", (lua_Integer)OpenXLSX::XLContentType::Chart);
     oluacls_enum(L, "ChartColorStyle", (lua_Integer)OpenXLSX::XLContentType::ChartColorStyle);
@@ -96,7 +74,7 @@ static int _olua_cls_openxlsx_XLContentType(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLContentType(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLContentType")) {
         luaL_error(L, "class not found: OpenXLSX::XLContentType");
     }
@@ -104,23 +82,11 @@ OLUA_LIB int luaopen_openxlsx_XLContentType(lua_State *L)
 }
 OLUA_END_DECLS
 
-static int _olua_fun_OpenXLSX_XLProperty___call(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    olua_pushenum(L, olua_checkinteger(L, -1));
-
-    olua_endinvoke(L);
-
-    return 1;
-}
-
 static int _olua_cls_openxlsx_XLProperty(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLProperty>(L, "openxlsx.XLProperty");
     oluacls_func(L, "__index", olua_indexerror);
     oluacls_func(L, "__newindex", olua_newindexerror);
-    oluacls_func(L, "__call", _olua_fun_OpenXLSX_XLProperty___call);
     oluacls_enum(L, "AppVersion", (lua_Integer)OpenXLSX::XLProperty::AppVersion);
     oluacls_enum(L, "Application", (lua_Integer)OpenXLSX::XLProperty::Application);
     oluacls_enum(L, "Category", (lua_Integer)OpenXLSX::XLProperty::Category);
@@ -148,7 +114,7 @@ static int _olua_cls_openxlsx_XLProperty(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLProperty(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLProperty")) {
         luaL_error(L, "class not found: OpenXLSX::XLProperty");
     }
@@ -156,23 +122,11 @@ OLUA_LIB int luaopen_openxlsx_XLProperty(lua_State *L)
 }
 OLUA_END_DECLS
 
-static int _olua_fun_OpenXLSX_XLQueryType___call(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    olua_pushenum(L, olua_checkinteger(L, -1));
-
-    olua_endinvoke(L);
-
-    return 1;
-}
-
 static int _olua_cls_openxlsx_XLQueryType(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLQueryType>(L, "openxlsx.XLQueryType");
     oluacls_func(L, "__index", olua_indexerror);
     oluacls_func(L, "__newindex", olua_newindexerror);
-    oluacls_func(L, "__call", _olua_fun_OpenXLSX_XLQueryType___call);
     oluacls_enum(L, "QuerySharedStrings", (lua_Integer)OpenXLSX::XLQueryType::QuerySharedStrings);
     oluacls_enum(L, "QuerySheetID", (lua_Integer)OpenXLSX::XLQueryType::QuerySheetID);
     oluacls_enum(L, "QuerySheetIndex", (lua_Integer)OpenXLSX::XLQueryType::QuerySheetIndex);
@@ -190,7 +144,7 @@ static int _olua_cls_openxlsx_XLQueryType(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLQueryType(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLQueryType")) {
         luaL_error(L, "class not found: OpenXLSX::XLQueryType");
     }
@@ -198,23 +152,11 @@ OLUA_LIB int luaopen_openxlsx_XLQueryType(lua_State *L)
 }
 OLUA_END_DECLS
 
-static int _olua_fun_OpenXLSX_XLSheetType___call(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    olua_pushenum(L, olua_checkinteger(L, -1));
-
-    olua_endinvoke(L);
-
-    return 1;
-}
-
 static int _olua_cls_openxlsx_XLSheetType(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLSheetType>(L, "openxlsx.XLSheetType");
     oluacls_func(L, "__index", olua_indexerror);
     oluacls_func(L, "__newindex", olua_newindexerror);
-    oluacls_func(L, "__call", _olua_fun_OpenXLSX_XLSheetType___call);
     oluacls_enum(L, "Chartsheet", (lua_Integer)OpenXLSX::XLSheetType::Chartsheet);
     oluacls_enum(L, "Dialogsheet", (lua_Integer)OpenXLSX::XLSheetType::Dialogsheet);
     oluacls_enum(L, "Macrosheet", (lua_Integer)OpenXLSX::XLSheetType::Macrosheet);
@@ -226,7 +168,7 @@ static int _olua_cls_openxlsx_XLSheetType(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLSheetType(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLSheetType")) {
         luaL_error(L, "class not found: OpenXLSX::XLSheetType");
     }
@@ -234,23 +176,11 @@ OLUA_LIB int luaopen_openxlsx_XLSheetType(lua_State *L)
 }
 OLUA_END_DECLS
 
-static int _olua_fun_OpenXLSX_XLValueType___call(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    olua_pushenum(L, olua_checkinteger(L, -1));
-
-    olua_endinvoke(L);
-
-    return 1;
-}
-
 static int _olua_cls_openxlsx_XLValueType(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLValueType>(L, "openxlsx.XLValueType");
     oluacls_func(L, "__index", olua_indexerror);
     oluacls_func(L, "__newindex", olua_newindexerror);
-    oluacls_func(L, "__call", _olua_fun_OpenXLSX_XLValueType___call);
     oluacls_enum(L, "Boolean", (lua_Integer)OpenXLSX::XLValueType::Boolean);
     oluacls_enum(L, "Empty", (lua_Integer)OpenXLSX::XLValueType::Empty);
     oluacls_enum(L, "Error", (lua_Integer)OpenXLSX::XLValueType::Error);
@@ -264,7 +194,7 @@ static int _olua_cls_openxlsx_XLValueType(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLValueType(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLValueType")) {
         luaL_error(L, "class not found: OpenXLSX::XLValueType");
     }
@@ -284,23 +214,10 @@ static int _olua_fun_OpenXLSX_XLCoordinates___gc(lua_State *L)
     return 0;
 }
 
-static int _olua_fun_OpenXLSX_XLCoordinates___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLCoordinates *)olua_toobj(L, 1, "openxlsx.XLCoordinates");
-    olua_push_object(L, self, "openxlsx.XLCoordinates");
-
-    olua_endinvoke(L);
-
-    return 1;
-}
-
 static int _olua_cls_openxlsx_XLCoordinates(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCoordinates>(L, "openxlsx.XLCoordinates");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLCoordinates___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLCoordinates___olua_move);
 
     return 1;
 }
@@ -308,7 +225,7 @@ static int _olua_cls_openxlsx_XLCoordinates(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLCoordinates(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLCoordinates")) {
         luaL_error(L, "class not found: OpenXLSX::XLCoordinates");
     }
@@ -326,18 +243,6 @@ static int _olua_fun_OpenXLSX_XLCellRange___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLCellRange___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLCellRange *)olua_toobj(L, 1, "openxlsx.XLCellRange");
-    olua_push_object(L, self, "openxlsx.XLCellRange");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLCellRange_clear(lua_State *L)
@@ -412,7 +317,6 @@ static int _olua_cls_openxlsx_XLCellRange(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCellRange>(L, "openxlsx.XLCellRange");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLCellRange___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLCellRange___olua_move);
     oluacls_func(L, "clear", _olua_fun_OpenXLSX_XLCellRange_clear);
     oluacls_func(L, "numColumns", _olua_fun_OpenXLSX_XLCellRange_numColumns);
     oluacls_func(L, "numRows", _olua_fun_OpenXLSX_XLCellRange_numRows);
@@ -423,7 +327,7 @@ static int _olua_cls_openxlsx_XLCellRange(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLCellRange(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLCellRange")) {
         luaL_error(L, "class not found: OpenXLSX::XLCellRange");
     }
@@ -441,18 +345,6 @@ static int _olua_fun_OpenXLSX_XLRowRange___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLRowRange___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLRowRange *)olua_toobj(L, 1, "openxlsx.XLRowRange");
-    olua_push_object(L, self, "openxlsx.XLRowRange");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLRowRange_rowCount(lua_State *L)
@@ -482,7 +374,6 @@ static int _olua_cls_openxlsx_XLRowRange(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLRowRange>(L, "openxlsx.XLRowRange");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLRowRange___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLRowRange___olua_move);
     oluacls_func(L, "rowCount", _olua_fun_OpenXLSX_XLRowRange_rowCount);
 
     return 1;
@@ -491,7 +382,7 @@ static int _olua_cls_openxlsx_XLRowRange(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLRowRange(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLRowRange")) {
         luaL_error(L, "class not found: OpenXLSX::XLRowRange");
     }
@@ -509,18 +400,6 @@ static int _olua_fun_OpenXLSX_XLRowDataRange___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLRowDataRange___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLRowDataRange *)olua_toobj(L, 1, "openxlsx.XLRowDataRange");
-    olua_push_object(L, self, "openxlsx.XLRowDataRange");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLRowDataRange_size(lua_State *L)
@@ -550,7 +429,6 @@ static int _olua_cls_openxlsx_XLRowDataRange(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLRowDataRange>(L, "openxlsx.XLRowDataRange");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLRowDataRange___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLRowDataRange___olua_move);
     oluacls_func(L, "size", _olua_fun_OpenXLSX_XLRowDataRange_size);
 
     return 1;
@@ -559,7 +437,7 @@ static int _olua_cls_openxlsx_XLRowDataRange(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLRowDataRange(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLRowDataRange")) {
         luaL_error(L, "class not found: OpenXLSX::XLRowDataRange");
     }
@@ -577,18 +455,6 @@ static int _olua_fun_OpenXLSX_XLRowDataProxy___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLRowDataProxy___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLRowDataProxy *)olua_toobj(L, 1, "openxlsx.XLRowDataProxy");
-    olua_push_object(L, self, "openxlsx.XLRowDataProxy");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLRowDataProxy_clear(lua_State *L)
@@ -617,7 +483,6 @@ static int _olua_cls_openxlsx_XLRowDataProxy(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLRowDataProxy>(L, "openxlsx.XLRowDataProxy");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLRowDataProxy___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLRowDataProxy___olua_move);
     oluacls_func(L, "clear", _olua_fun_OpenXLSX_XLRowDataProxy_clear);
 
     return 1;
@@ -626,7 +491,7 @@ static int _olua_cls_openxlsx_XLRowDataProxy(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLRowDataProxy(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLRowDataProxy")) {
         luaL_error(L, "class not found: OpenXLSX::XLRowDataProxy");
     }
@@ -644,18 +509,6 @@ static int _olua_fun_OpenXLSX_IZipArchive___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_IZipArchive___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::IZipArchive *)olua_toobj(L, 1, "openxlsx.IZipArchive");
-    olua_push_object(L, self, "openxlsx.IZipArchive");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_IZipArchive_addEntry(lua_State *L)
@@ -898,7 +751,6 @@ static int _olua_cls_openxlsx_IZipArchive(lua_State *L)
 {
     oluacls_class<OpenXLSX::IZipArchive>(L, "openxlsx.IZipArchive");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_IZipArchive___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_IZipArchive___olua_move);
     oluacls_func(L, "addEntry", _olua_fun_OpenXLSX_IZipArchive_addEntry);
     oluacls_func(L, "close", _olua_fun_OpenXLSX_IZipArchive_close);
     oluacls_func(L, "deleteEntry", _olua_fun_OpenXLSX_IZipArchive_deleteEntry);
@@ -917,7 +769,7 @@ static int _olua_cls_openxlsx_IZipArchive(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_IZipArchive(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.IZipArchive")) {
         luaL_error(L, "class not found: OpenXLSX::IZipArchive");
     }
@@ -935,18 +787,6 @@ static int _olua_fun_OpenXLSX_XLCommand___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLCommand___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLCommand *)olua_toobj(L, 1, "openxlsx.XLCommand");
-    olua_push_object(L, self, "openxlsx.XLCommand");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLCommand_getParamBool(lua_State *L)
@@ -1208,7 +1048,6 @@ static int _olua_cls_openxlsx_XLCommand(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCommand>(L, "openxlsx.XLCommand");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLCommand___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLCommand___olua_move);
     oluacls_func(L, "getParamBool", _olua_fun_OpenXLSX_XLCommand_getParamBool);
     oluacls_func(L, "getParamInt", _olua_fun_OpenXLSX_XLCommand_getParamInt);
     oluacls_func(L, "getParamNumber", _olua_fun_OpenXLSX_XLCommand_getParamNumber);
@@ -1226,7 +1065,7 @@ static int _olua_cls_openxlsx_XLCommand(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLCommand(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLCommand")) {
         luaL_error(L, "class not found: OpenXLSX::XLCommand");
     }
@@ -1244,18 +1083,6 @@ static int _olua_fun_OpenXLSX_XLXmlFile___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLXmlFile___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLXmlFile *)olua_toobj(L, 1, "openxlsx.XLXmlFile");
-    olua_push_object(L, self, "openxlsx.XLXmlFile");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLXmlFile_new$1(lua_State *L)
@@ -1327,7 +1154,6 @@ static int _olua_cls_openxlsx_XLXmlFile(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLXmlFile>(L, "openxlsx.XLXmlFile");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLXmlFile___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLXmlFile___olua_move);
     oluacls_func(L, "new", _olua_fun_OpenXLSX_XLXmlFile_new);
 
     return 1;
@@ -1336,7 +1162,7 @@ static int _olua_cls_openxlsx_XLXmlFile(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLXmlFile(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLXmlFile")) {
         luaL_error(L, "class not found: OpenXLSX::XLXmlFile");
     }
@@ -1354,18 +1180,6 @@ static int _olua_fun_OpenXLSX_XLQuery___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLQuery___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLQuery *)olua_toobj(L, 1, "openxlsx.XLQuery");
-    olua_push_object(L, self, "openxlsx.XLQuery");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLQuery_getParamBool(lua_State *L)
@@ -1627,7 +1441,6 @@ static int _olua_cls_openxlsx_XLQuery(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLQuery>(L, "openxlsx.XLQuery");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLQuery___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLQuery___olua_move);
     oluacls_func(L, "getParamBool", _olua_fun_OpenXLSX_XLQuery_getParamBool);
     oluacls_func(L, "getParamInt", _olua_fun_OpenXLSX_XLQuery_getParamInt);
     oluacls_func(L, "getParamNumber", _olua_fun_OpenXLSX_XLQuery_getParamNumber);
@@ -1645,7 +1458,7 @@ static int _olua_cls_openxlsx_XLQuery(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLQuery(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLQuery")) {
         luaL_error(L, "class not found: OpenXLSX::XLQuery");
     }
@@ -1663,18 +1476,6 @@ static int _olua_fun_OpenXLSX_XLXmlData___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLXmlData___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLXmlData *)olua_toobj(L, 1, "openxlsx.XLXmlData");
-    olua_push_object(L, self, "openxlsx.XLXmlData");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLXmlData_getParentDoc(lua_State *L)
@@ -1959,7 +1760,6 @@ static int _olua_cls_openxlsx_XLXmlData(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLXmlData>(L, "openxlsx.XLXmlData");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLXmlData___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLXmlData___olua_move);
     oluacls_func(L, "getParentDoc", _olua_fun_OpenXLSX_XLXmlData_getParentDoc);
     oluacls_func(L, "getRawData", _olua_fun_OpenXLSX_XLXmlData_getRawData);
     oluacls_func(L, "getXmlID", _olua_fun_OpenXLSX_XLXmlData_getXmlID);
@@ -1979,7 +1779,7 @@ static int _olua_cls_openxlsx_XLXmlData(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLXmlData(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLXmlData")) {
         luaL_error(L, "class not found: OpenXLSX::XLXmlData");
     }
@@ -1997,18 +1797,6 @@ static int _olua_fun_OpenXLSX_XLFormulaProxy___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLFormulaProxy___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLFormulaProxy *)olua_toobj(L, 1, "openxlsx.XLFormulaProxy");
-    olua_push_object(L, self, "openxlsx.XLFormulaProxy");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLFormulaProxy_clear(lua_State *L)
@@ -2085,7 +1873,6 @@ static int _olua_cls_openxlsx_XLFormulaProxy(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLFormulaProxy>(L, "openxlsx.XLFormulaProxy");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLFormulaProxy___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLFormulaProxy___olua_move);
     oluacls_func(L, "clear", _olua_fun_OpenXLSX_XLFormulaProxy_clear);
     oluacls_func(L, "get", _olua_fun_OpenXLSX_XLFormulaProxy_get);
     oluacls_func(L, "setString", _olua_fun_OpenXLSX_XLFormulaProxy_setString);
@@ -2096,7 +1883,7 @@ static int _olua_cls_openxlsx_XLFormulaProxy(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLFormulaProxy(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLFormulaProxy")) {
         luaL_error(L, "class not found: OpenXLSX::XLFormulaProxy");
     }
@@ -2114,18 +1901,6 @@ static int _olua_fun_OpenXLSX_XLCellValueProxy___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLCellValueProxy___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLCellValueProxy *)olua_toobj(L, 1, "openxlsx.XLCellValueProxy");
-    olua_push_object(L, self, "openxlsx.XLCellValueProxy");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLCellValueProxy_clear(lua_State *L)
@@ -2414,7 +2189,6 @@ static int _olua_cls_openxlsx_XLCellValueProxy(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCellValueProxy>(L, "openxlsx.XLCellValueProxy");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLCellValueProxy___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLCellValueProxy___olua_move);
     oluacls_func(L, "clear", _olua_fun_OpenXLSX_XLCellValueProxy_clear);
     oluacls_func(L, "getBool", _olua_fun_OpenXLSX_XLCellValueProxy_getBool);
     oluacls_func(L, "getInt", _olua_fun_OpenXLSX_XLCellValueProxy_getInt);
@@ -2438,7 +2212,7 @@ static int _olua_cls_openxlsx_XLCellValueProxy(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLCellValueProxy(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLCellValueProxy")) {
         luaL_error(L, "class not found: OpenXLSX::XLCellValueProxy");
     }
@@ -2456,18 +2230,6 @@ static int _olua_fun_OpenXLSX_XLCell___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLCell___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLCell *)olua_toobj(L, 1, "openxlsx.XLCell");
-    olua_push_object(L, self, "openxlsx.XLCell");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLCell_cellReference(lua_State *L)
@@ -2660,7 +2422,6 @@ static int _olua_cls_openxlsx_XLCell(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCell>(L, "openxlsx.XLCell");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLCell___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLCell___olua_move);
     oluacls_func(L, "cellReference", _olua_fun_OpenXLSX_XLCell_cellReference);
     oluacls_func(L, "copyFrom", _olua_fun_OpenXLSX_XLCell_copyFrom);
     oluacls_func(L, "formula", _olua_fun_OpenXLSX_XLCell_formula);
@@ -2677,7 +2438,7 @@ static int _olua_cls_openxlsx_XLCell(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLCell(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLCell")) {
         luaL_error(L, "class not found: OpenXLSX::XLCell");
     }
@@ -2695,18 +2456,6 @@ static int _olua_fun_OpenXLSX_XLCellReference___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLCellReference___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLCellReference *)olua_toobj(L, 1, "openxlsx.XLCellReference");
-    olua_push_object(L, self, "openxlsx.XLCellReference");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLCellReference_address(lua_State *L)
@@ -3124,7 +2873,6 @@ static int _olua_cls_openxlsx_XLCellReference(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCellReference>(L, "openxlsx.XLCellReference");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLCellReference___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLCellReference___olua_move);
     oluacls_func(L, "address", _olua_fun_OpenXLSX_XLCellReference_address);
     oluacls_func(L, "column", _olua_fun_OpenXLSX_XLCellReference_column);
     oluacls_func(L, "columnAsNumber", _olua_fun_OpenXLSX_XLCellReference_columnAsNumber);
@@ -3145,7 +2893,7 @@ static int _olua_cls_openxlsx_XLCellReference(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLCellReference(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLCellReference")) {
         luaL_error(L, "class not found: OpenXLSX::XLCellReference");
     }
@@ -3258,7 +3006,7 @@ static int _olua_cls_openxlsx_XLCellAssignable(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLCellAssignable(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLCellAssignable")) {
         luaL_error(L, "class not found: OpenXLSX::XLCellAssignable");
     }
@@ -3276,18 +3024,6 @@ static int _olua_fun_OpenXLSX_XLColor___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLColor___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLColor *)olua_toobj(L, 1, "openxlsx.XLColor");
-    olua_push_object(L, self, "openxlsx.XLColor");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLColor_alpha(lua_State *L)
@@ -3747,7 +3483,6 @@ static int _olua_cls_openxlsx_XLColor(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLColor>(L, "openxlsx.XLColor");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLColor___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLColor___olua_move);
     oluacls_func(L, "alpha", _olua_fun_OpenXLSX_XLColor_alpha);
     oluacls_func(L, "blue", _olua_fun_OpenXLSX_XLColor_blue);
     oluacls_func(L, "green", _olua_fun_OpenXLSX_XLColor_green);
@@ -3762,7 +3497,7 @@ static int _olua_cls_openxlsx_XLColor(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLColor(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLColor")) {
         luaL_error(L, "class not found: OpenXLSX::XLColor");
     }
@@ -3780,18 +3515,6 @@ static int _olua_fun_OpenXLSX_XLColumn___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLColumn___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLColumn *)olua_toobj(L, 1, "openxlsx.XLColumn");
-    olua_push_object(L, self, "openxlsx.XLColumn");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLColumn_isHidden(lua_State *L)
@@ -3892,7 +3615,6 @@ static int _olua_cls_openxlsx_XLColumn(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLColumn>(L, "openxlsx.XLColumn");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLColumn___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLColumn___olua_move);
     oluacls_func(L, "isHidden", _olua_fun_OpenXLSX_XLColumn_isHidden);
     oluacls_func(L, "setHidden", _olua_fun_OpenXLSX_XLColumn_setHidden);
     oluacls_func(L, "setWidth", _olua_fun_OpenXLSX_XLColumn_setWidth);
@@ -3905,7 +3627,7 @@ static int _olua_cls_openxlsx_XLColumn(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLColumn(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLColumn")) {
         luaL_error(L, "class not found: OpenXLSX::XLColumn");
     }
@@ -3923,18 +3645,6 @@ static int _olua_fun_OpenXLSX_XLRow___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLRow___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLRow *)olua_toobj(L, 1, "openxlsx.XLRow");
-    olua_push_object(L, self, "openxlsx.XLRow");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLRow_cellCount(lua_State *L)
@@ -4274,7 +3984,6 @@ static int _olua_cls_openxlsx_XLRow(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLRow>(L, "openxlsx.XLRow");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLRow___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLRow___olua_move);
     oluacls_func(L, "cellCount", _olua_fun_OpenXLSX_XLRow_cellCount);
     oluacls_func(L, "cells", _olua_fun_OpenXLSX_XLRow_cells);
     oluacls_func(L, "descent", _olua_fun_OpenXLSX_XLRow_descent);
@@ -4294,7 +4003,7 @@ static int _olua_cls_openxlsx_XLRow(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLRow(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLRow")) {
         luaL_error(L, "class not found: OpenXLSX::XLRow");
     }
@@ -4302,23 +4011,11 @@ OLUA_LIB int luaopen_openxlsx_XLRow(lua_State *L)
 }
 OLUA_END_DECLS
 
-static int _olua_fun_OpenXLSX_XLSheetState___call(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    olua_pushenum(L, olua_checkinteger(L, -1));
-
-    olua_endinvoke(L);
-
-    return 1;
-}
-
 static int _olua_cls_openxlsx_XLSheetState(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLSheetState>(L, "openxlsx.XLSheetState");
     oluacls_func(L, "__index", olua_indexerror);
     oluacls_func(L, "__newindex", olua_newindexerror);
-    oluacls_func(L, "__call", _olua_fun_OpenXLSX_XLSheetState___call);
     oluacls_enum(L, "Hidden", (lua_Integer)OpenXLSX::XLSheetState::Hidden);
     oluacls_enum(L, "VeryHidden", (lua_Integer)OpenXLSX::XLSheetState::VeryHidden);
     oluacls_enum(L, "Visible", (lua_Integer)OpenXLSX::XLSheetState::Visible);
@@ -4329,7 +4026,7 @@ static int _olua_cls_openxlsx_XLSheetState(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLSheetState(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLSheetState")) {
         luaL_error(L, "class not found: OpenXLSX::XLSheetState");
     }
@@ -4693,7 +4390,7 @@ static int _olua_cls_openxlsx_XLSheet(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLSheet(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLSheet")) {
         luaL_error(L, "class not found: OpenXLSX::XLSheet");
     }
@@ -4711,18 +4408,6 @@ static int _olua_fun_OpenXLSX_XLChartsheet___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLChartsheet___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLChartsheet *)olua_toobj(L, 1, "openxlsx.XLChartsheet");
-    olua_push_object(L, self, "openxlsx.XLChartsheet");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLChartsheet_clone(lua_State *L)
@@ -5053,7 +4738,6 @@ static int _olua_cls_openxlsx_XLChartsheet(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLChartsheet>(L, "openxlsx.XLChartsheet");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLChartsheet___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLChartsheet___olua_move);
     oluacls_func(L, "clone", _olua_fun_OpenXLSX_XLChartsheet_clone);
     oluacls_func(L, "color", _olua_fun_OpenXLSX_XLChartsheet_color);
     oluacls_func(L, "index", _olua_fun_OpenXLSX_XLChartsheet_index);
@@ -5074,7 +4758,7 @@ static int _olua_cls_openxlsx_XLChartsheet(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLChartsheet(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLChartsheet")) {
         luaL_error(L, "class not found: OpenXLSX::XLChartsheet");
     }
@@ -5242,7 +4926,7 @@ static int _olua_cls_openxlsx_XLSharedStrings(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLSharedStrings(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLSharedStrings")) {
         luaL_error(L, "class not found: OpenXLSX::XLSharedStrings");
     }
@@ -5260,18 +4944,6 @@ static int _olua_fun_OpenXLSX_XLWorksheet___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLWorksheet___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLWorksheet *)olua_toobj(L, 1, "openxlsx.XLWorksheet");
-    olua_push_object(L, self, "openxlsx.XLWorksheet");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLWorksheet_cell$1(lua_State *L)
@@ -6072,7 +5744,6 @@ static int _olua_cls_openxlsx_XLWorksheet(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLWorksheet>(L, "openxlsx.XLWorksheet");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLWorksheet___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLWorksheet___olua_move);
     oluacls_func(L, "cell", _olua_fun_OpenXLSX_XLWorksheet_cell);
     oluacls_func(L, "clone", _olua_fun_OpenXLSX_XLWorksheet_clone);
     oluacls_func(L, "color", _olua_fun_OpenXLSX_XLWorksheet_color);
@@ -6105,7 +5776,7 @@ static int _olua_cls_openxlsx_XLWorksheet(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLWorksheet(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLWorksheet")) {
         luaL_error(L, "class not found: OpenXLSX::XLWorksheet");
     }
@@ -6956,7 +6627,7 @@ static int _olua_cls_openxlsx_XLWorkbook(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLWorkbook(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLWorkbook")) {
         luaL_error(L, "class not found: OpenXLSX::XLWorkbook");
     }
@@ -6974,18 +6645,6 @@ static int _olua_fun_OpenXLSX_XLDocument___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
-}
-
-static int _olua_fun_OpenXLSX_XLDocument___olua_move(lua_State *L)
-{
-    olua_startinvoke(L);
-
-    auto self = (OpenXLSX::XLDocument *)olua_toobj(L, 1, "openxlsx.XLDocument");
-    olua_push_object(L, self, "openxlsx.XLDocument");
-
-    olua_endinvoke(L);
-
-    return 1;
 }
 
 static int _olua_fun_OpenXLSX_XLDocument_close(lua_State *L)
@@ -7452,7 +7111,6 @@ static int _olua_cls_openxlsx_XLDocument(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLDocument>(L, "openxlsx.XLDocument");
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLDocument___gc);
-    oluacls_func(L, "__olua_move", _olua_fun_OpenXLSX_XLDocument___olua_move);
     oluacls_func(L, "close", _olua_fun_OpenXLSX_XLDocument_close);
     oluacls_func(L, "create", _olua_fun_OpenXLSX_XLDocument_create);
     oluacls_func(L, "deleteProperty", _olua_fun_OpenXLSX_XLDocument_deleteProperty);
@@ -7475,7 +7133,7 @@ static int _olua_cls_openxlsx_XLDocument(lua_State *L)
 OLUA_BEGIN_DECLS
 OLUA_LIB int luaopen_openxlsx_XLDocument(lua_State *L)
 {
-    olua_require(L, "openxlsx",  luaopen_openxlsx);
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
     if (!olua_getclass(L, "openxlsx.XLDocument")) {
         luaL_error(L, "class not found: OpenXLSX::XLDocument");
     }
@@ -7483,8 +7141,7 @@ OLUA_LIB int luaopen_openxlsx_XLDocument(lua_State *L)
 }
 OLUA_END_DECLS
 
-OLUA_BEGIN_DECLS
-OLUA_LIB int luaopen_openxlsx(lua_State *L)
+int _olua_module_openxlsx(lua_State *L)
 {
     olua_require(L, "openxlsx.XLCommandType", _olua_cls_openxlsx_XLCommandType);
     olua_require(L, "openxlsx.XLContentType", _olua_cls_openxlsx_XLContentType);
@@ -7518,7 +7175,15 @@ OLUA_LIB int luaopen_openxlsx(lua_State *L)
     olua_require(L, "openxlsx.XLWorkbook", _olua_cls_openxlsx_XLWorkbook);
     olua_require(L, "openxlsx.XLDocument", _olua_cls_openxlsx_XLDocument);
 
-    if (olua_getclass(L, olua_getluatype<OpenXLSX::XLDocument>(L))) {
+    return 0;
+}
+
+OLUA_BEGIN_DECLS
+OLUA_LIB int luaopen_openxlsx(lua_State *L)
+{
+    olua_require(L, "openxlsx",  _olua_module_openxlsx);
+
+    if (olua_getclass(L, "openxlsx.XLDocument")) {
         return 1;
     }
 

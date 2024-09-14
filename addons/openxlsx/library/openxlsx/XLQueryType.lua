@@ -6,7 +6,6 @@ local VALUE
 
 ---
 ---@enum openxlsx.XLQueryType
----@operator call(integer): openxlsx.XLQueryType
 local XLQueryType = {
     QuerySharedStrings = 8,
     QuerySheetID = 5,
@@ -19,9 +18,5 @@ local XLQueryType = {
     QuerySheetVisibility = 2,
     QueryXmlData = 9,
 }
-
----@param v integer
----@return openxlsx.XLQueryType
-function XLQueryType:__call(v) end
 
 return XLQueryType

@@ -6,7 +6,6 @@ local VALUE
 
 ---
 ---@enum openxlsx.XLProperty
----@operator call(integer): openxlsx.XLProperty
 local XLProperty = {
     AppVersion = 19,
     Application = 10,
@@ -29,9 +28,5 @@ local XLProperty = {
     Subject = 1,
     Title = 0,
 }
-
----@param v integer
----@return openxlsx.XLProperty
-function XLProperty:__call(v) end
 
 return XLProperty

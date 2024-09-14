@@ -6,7 +6,6 @@ local VALUE
 
 ---
 ---@enum openxlsx.XLContentType
----@operator call(integer): openxlsx.XLContentType
 local XLContentType = {
     CalculationChain = 13,
     Chart = 9,
@@ -31,9 +30,5 @@ local XLContentType = {
     WorkbookMacroEnabled = 1,
     Worksheet = 2,
 }
-
----@param v integer
----@return openxlsx.XLContentType
-function XLContentType:__call(v) end
 
 return XLContentType

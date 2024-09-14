@@ -11,9 +11,6 @@ local XLDocument = {}
 ---@return any
 function XLDocument:__gc() end
 
----@return any
-function XLDocument:__olua_move() end
-
 ---Close the current document
 function XLDocument:close() end
 

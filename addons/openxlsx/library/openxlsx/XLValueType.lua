@@ -6,7 +6,6 @@ local VALUE
 
 ---
 ---@enum openxlsx.XLValueType
----@operator call(integer): openxlsx.XLValueType
 local XLValueType = {
     Boolean = 1,
     Empty = 0,
@@ -15,9 +14,5 @@ local XLValueType = {
     Integer = 2,
     String = 5,
 }
-
----@param v integer
----@return openxlsx.XLValueType
-function XLValueType:__call(v) end
 
 return XLValueType

@@ -10,9 +10,6 @@ local XLRow = {}
 ---@return any
 function XLRow:__gc() end
 
----@return any
-function XLRow:__olua_move() end
-
 ---Get the number of cells in the row.
 ---@return integer # The number of cells in the row.
 function XLRow:cellCount() end

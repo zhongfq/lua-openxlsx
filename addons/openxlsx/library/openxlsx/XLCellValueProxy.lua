@@ -15,9 +15,6 @@ local XLCellValueProxy = {}
 ---@return any
 function XLCellValueProxy:__gc() end
 
----@return any
-function XLCellValueProxy:__olua_move() end
-
 ---Clear the contents of the cell.
 ---@return openxlsx.XLCellValueProxy # A reference to the current object.
 function XLCellValueProxy:clear() end

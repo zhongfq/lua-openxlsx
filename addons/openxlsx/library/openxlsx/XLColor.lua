@@ -8,9 +8,6 @@ local XLColor = {}
 ---@return any
 function XLColor:__gc() end
 
----@return any
-function XLColor:__olua_move() end
-
 ---
 ---@return integer # 
 function XLColor:alpha() end

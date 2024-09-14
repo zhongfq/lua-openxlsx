@@ -8,9 +8,6 @@ local XLCellReference = {}
 ---@return any
 function XLCellReference:__gc() end
 
----@return any
-function XLCellReference:__olua_move() end
-
 ---Get the address of the XLCellReference
 ---@return string # The address, e.g. 'A1'
 function XLCellReference:address() end

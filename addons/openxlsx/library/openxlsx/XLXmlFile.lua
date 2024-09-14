@@ -11,9 +11,6 @@ local XLXmlFile = {}
 ---@return any
 function XLXmlFile:__gc() end
 
----@return any
-function XLXmlFile:__olua_move() end
-
 ---Default constructor.
 ---@return openxlsx.XLXmlFile
 ---

@@ -6,7 +6,6 @@ local VALUE
 
 ---
 ---@enum openxlsx.XLCommandType
----@operator call(integer): openxlsx.XLCommandType
 local XLCommandType = {
     AddChartsheet = 10,
     AddSharedStrings = 8,
@@ -22,9 +21,5 @@ local XLCommandType = {
     SetSheetName = 0,
     SetSheetVisibility = 2,
 }
-
----@param v integer
----@return openxlsx.XLCommandType
-function XLCommandType:__call(v) end
 
 return XLCommandType

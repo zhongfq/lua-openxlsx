@@ -10,9 +10,6 @@ local XLChartsheet = {}
 ---@return any
 function XLChartsheet:__gc() end
 
----@return any
-function XLChartsheet:__olua_move() end
-
 ---Method for cloning the sheet.
 ---@param newName string # A std::string with the name of the clone
 ---\return A pointer to the cloned object.

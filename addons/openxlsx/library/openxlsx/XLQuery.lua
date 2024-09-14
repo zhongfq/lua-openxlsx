@@ -8,9 +8,6 @@ local XLQuery = {}
 ---@return any
 function XLQuery:__gc() end
 
----@return any
-function XLQuery:__olua_move() end
-
 ---
 ---\tparam T
 ---@param param string # 

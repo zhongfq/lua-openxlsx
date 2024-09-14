@@ -8,7 +8,4 @@ local XLCoordinates = {}
 ---@return any
 function XLCoordinates:__gc() end
 
----@return any
-function XLCoordinates:__olua_move() end
-
 return XLCoordinates

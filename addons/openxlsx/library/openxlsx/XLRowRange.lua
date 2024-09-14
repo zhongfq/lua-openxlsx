@@ -8,9 +8,6 @@ local XLRowRange = {}
 ---@return any
 function XLRowRange:__gc() end
 
----@return any
-function XLRowRange:__olua_move() end
-
 ---
 ---@return integer # 
 function XLRowRange:rowCount() end

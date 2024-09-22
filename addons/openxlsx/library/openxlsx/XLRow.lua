@@ -7,8 +7,26 @@
 ---@field hidden boolean Is the row hidden? \return The state of the row.
 local XLRow = {}
 
+---
+---@param lhs openxlsx.XLRow # 
+---@param rhs openxlsx.XLRow # 
+---@return boolean # 
+function XLRow.__eq(lhs, rhs) end
+
 ---@return any
 function XLRow:__gc() end
+
+---
+---@param lhs openxlsx.XLRow # 
+---@param rhs openxlsx.XLRow # 
+---@return boolean # 
+function XLRow.__le(lhs, rhs) end
+
+---
+---@param lhs openxlsx.XLRow # 
+---@param rhs openxlsx.XLRow # 
+---@return boolean # 
+function XLRow.__lt(lhs, rhs) end
 
 ---Get the number of cells in the row.
 ---@return integer # The number of cells in the row.

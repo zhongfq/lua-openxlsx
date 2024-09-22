@@ -2220,6 +2220,31 @@ OLUA_LIB int luaopen_openxlsx_XLCellValueProxy(lua_State *L)
 }
 OLUA_END_DECLS
 
+static int _olua_fun_OpenXLSX_XLCell___eq(lua_State *L)
+{
+    try {
+        olua_startinvoke(L);
+
+        OpenXLSX::XLCell *arg1;       /** lhs */
+        OpenXLSX::XLCell *arg2;       /** rhs */
+
+        olua_check_object(L, 1, &arg1, "openxlsx.XLCell");
+        olua_check_object(L, 2, &arg2, "openxlsx.XLCell");
+
+        // @operator(operator==) static bool operator==(const OpenXLSX::XLCell &lhs, const OpenXLSX::XLCell &rhs)
+        bool ret = (*arg1) == (*arg2);
+        int num_ret = olua_push_bool(L, ret);
+
+        olua_endinvoke(L);
+
+        return num_ret;
+    } catch (std::exception &e) {
+        lua_pushfstring(L, "OpenXLSX::XLCell::__eq(): %s", e.what());
+        luaL_error(L, olua_tostring(L, -1));
+        return 0;
+    }
+}
+
 static int _olua_fun_OpenXLSX_XLCell___gc(lua_State *L)
 {
     olua_startinvoke(L);
@@ -2421,6 +2446,7 @@ static int _olua_fun_OpenXLSX_XLCell_value(lua_State *L)
 static int _olua_cls_openxlsx_XLCell(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCell>(L, "openxlsx.XLCell");
+    oluacls_func(L, "__eq", _olua_fun_OpenXLSX_XLCell___eq);
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLCell___gc);
     oluacls_func(L, "cellReference", _olua_fun_OpenXLSX_XLCell_cellReference);
     oluacls_func(L, "copyFrom", _olua_fun_OpenXLSX_XLCell_copyFrom);
@@ -2446,6 +2472,31 @@ OLUA_LIB int luaopen_openxlsx_XLCell(lua_State *L)
 }
 OLUA_END_DECLS
 
+static int _olua_fun_OpenXLSX_XLCellReference___eq(lua_State *L)
+{
+    try {
+        olua_startinvoke(L);
+
+        OpenXLSX::XLCellReference *arg1;       /** lhs */
+        OpenXLSX::XLCellReference *arg2;       /** rhs */
+
+        olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
+        olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+
+        // @operator(operator==) static bool operator==(const OpenXLSX::XLCellReference &lhs, const OpenXLSX::XLCellReference &rhs)
+        bool ret = (*arg1) == (*arg2);
+        int num_ret = olua_push_bool(L, ret);
+
+        olua_endinvoke(L);
+
+        return num_ret;
+    } catch (std::exception &e) {
+        lua_pushfstring(L, "OpenXLSX::XLCellReference::__eq(): %s", e.what());
+        luaL_error(L, olua_tostring(L, -1));
+        return 0;
+    }
+}
+
 static int _olua_fun_OpenXLSX_XLCellReference___gc(lua_State *L)
 {
     olua_startinvoke(L);
@@ -2456,6 +2507,56 @@ static int _olua_fun_OpenXLSX_XLCellReference___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
+}
+
+static int _olua_fun_OpenXLSX_XLCellReference___le(lua_State *L)
+{
+    try {
+        olua_startinvoke(L);
+
+        OpenXLSX::XLCellReference *arg1;       /** lhs */
+        OpenXLSX::XLCellReference *arg2;       /** rhs */
+
+        olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
+        olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+
+        // @operator(operator<=) static bool operator<=(const OpenXLSX::XLCellReference &lhs, const OpenXLSX::XLCellReference &rhs)
+        bool ret = (*arg1) <= (*arg2);
+        int num_ret = olua_push_bool(L, ret);
+
+        olua_endinvoke(L);
+
+        return num_ret;
+    } catch (std::exception &e) {
+        lua_pushfstring(L, "OpenXLSX::XLCellReference::__le(): %s", e.what());
+        luaL_error(L, olua_tostring(L, -1));
+        return 0;
+    }
+}
+
+static int _olua_fun_OpenXLSX_XLCellReference___lt(lua_State *L)
+{
+    try {
+        olua_startinvoke(L);
+
+        OpenXLSX::XLCellReference *arg1;       /** lhs */
+        OpenXLSX::XLCellReference *arg2;       /** rhs */
+
+        olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
+        olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+
+        // @operator(operator<) static bool operator<(const OpenXLSX::XLCellReference &lhs, const OpenXLSX::XLCellReference &rhs)
+        bool ret = (*arg1) < (*arg2);
+        int num_ret = olua_push_bool(L, ret);
+
+        olua_endinvoke(L);
+
+        return num_ret;
+    } catch (std::exception &e) {
+        lua_pushfstring(L, "OpenXLSX::XLCellReference::__lt(): %s", e.what());
+        luaL_error(L, olua_tostring(L, -1));
+        return 0;
+    }
 }
 
 static int _olua_fun_OpenXLSX_XLCellReference_address(lua_State *L)
@@ -2872,7 +2973,10 @@ static int _olua_fun_OpenXLSX_XLCellReference_setRowAndColumn(lua_State *L)
 static int _olua_cls_openxlsx_XLCellReference(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLCellReference>(L, "openxlsx.XLCellReference");
+    oluacls_func(L, "__eq", _olua_fun_OpenXLSX_XLCellReference___eq);
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLCellReference___gc);
+    oluacls_func(L, "__le", _olua_fun_OpenXLSX_XLCellReference___le);
+    oluacls_func(L, "__lt", _olua_fun_OpenXLSX_XLCellReference___lt);
     oluacls_func(L, "address", _olua_fun_OpenXLSX_XLCellReference_address);
     oluacls_func(L, "column", _olua_fun_OpenXLSX_XLCellReference_column);
     oluacls_func(L, "columnAsNumber", _olua_fun_OpenXLSX_XLCellReference_columnAsNumber);
@@ -3013,6 +3117,31 @@ OLUA_LIB int luaopen_openxlsx_XLCellAssignable(lua_State *L)
     return 1;
 }
 OLUA_END_DECLS
+
+static int _olua_fun_OpenXLSX_XLColor___eq(lua_State *L)
+{
+    try {
+        olua_startinvoke(L);
+
+        OpenXLSX::XLColor *arg1;       /** lhs */
+        OpenXLSX::XLColor *arg2;       /** rhs */
+
+        olua_check_object(L, 1, &arg1, "openxlsx.XLColor");
+        olua_check_object(L, 2, &arg2, "openxlsx.XLColor");
+
+        // @operator(operator==) static bool operator==(const OpenXLSX::XLColor &lhs, const OpenXLSX::XLColor &rhs)
+        bool ret = (*arg1) == (*arg2);
+        int num_ret = olua_push_bool(L, ret);
+
+        olua_endinvoke(L);
+
+        return num_ret;
+    } catch (std::exception &e) {
+        lua_pushfstring(L, "OpenXLSX::XLColor::__eq(): %s", e.what());
+        luaL_error(L, olua_tostring(L, -1));
+        return 0;
+    }
+}
 
 static int _olua_fun_OpenXLSX_XLColor___gc(lua_State *L)
 {
@@ -3434,41 +3563,41 @@ static int _olua_fun_OpenXLSX_XLColor_set$6(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLColor_set(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 0) {
+    if (num_args == 1) {
         // void set()
         return _olua_fun_OpenXLSX_XLColor_set$3(L);
     }
 
-    if (num_args == 1) {
-        if ((olua_is_integer(L, 2))) {
+    if (num_args == 2) {
+        if ((olua_is_object(L, 1, "openxlsx.XLColor")) && (olua_is_integer(L, 2))) {
             // void set(@optional uint8_t red)
             return _olua_fun_OpenXLSX_XLColor_set$4(L);
         }
 
-        // if ((olua_is_string(L, 2))) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLColor")) && (olua_is_string(L, 2))) {
             // void set(const std::string &hexCode)
             return _olua_fun_OpenXLSX_XLColor_set$6(L);
         // }
     }
 
-    if (num_args == 2) {
-        // if ((olua_is_integer(L, 2)) && (olua_is_integer(L, 3))) {
+    if (num_args == 3) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLColor")) && (olua_is_integer(L, 2)) && (olua_is_integer(L, 3))) {
             // void set(@optional uint8_t red, @optional uint8_t green)
             return _olua_fun_OpenXLSX_XLColor_set$5(L);
         // }
     }
 
-    if (num_args == 3) {
-        // if ((olua_is_integer(L, 2)) && (olua_is_integer(L, 3)) && (olua_is_integer(L, 4))) {
+    if (num_args == 4) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLColor")) && (olua_is_integer(L, 2)) && (olua_is_integer(L, 3)) && (olua_is_integer(L, 4))) {
             // void set(@optional uint8_t red, @optional uint8_t green, @optional uint8_t blue)
             return _olua_fun_OpenXLSX_XLColor_set$2(L);
         // }
     }
 
-    if (num_args == 4) {
-        // if ((olua_is_integer(L, 2)) && (olua_is_integer(L, 3)) && (olua_is_integer(L, 4)) && (olua_is_integer(L, 5))) {
+    if (num_args == 5) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLColor")) && (olua_is_integer(L, 2)) && (olua_is_integer(L, 3)) && (olua_is_integer(L, 4)) && (olua_is_integer(L, 5))) {
             // void set(uint8_t alpha, uint8_t red, uint8_t green, uint8_t blue)
             return _olua_fun_OpenXLSX_XLColor_set$1(L);
         // }
@@ -3482,6 +3611,7 @@ static int _olua_fun_OpenXLSX_XLColor_set(lua_State *L)
 static int _olua_cls_openxlsx_XLColor(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLColor>(L, "openxlsx.XLColor");
+    oluacls_func(L, "__eq", _olua_fun_OpenXLSX_XLColor___eq);
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLColor___gc);
     oluacls_func(L, "alpha", _olua_fun_OpenXLSX_XLColor_alpha);
     oluacls_func(L, "blue", _olua_fun_OpenXLSX_XLColor_blue);
@@ -3635,6 +3765,31 @@ OLUA_LIB int luaopen_openxlsx_XLColumn(lua_State *L)
 }
 OLUA_END_DECLS
 
+static int _olua_fun_OpenXLSX_XLRow___eq(lua_State *L)
+{
+    try {
+        olua_startinvoke(L);
+
+        OpenXLSX::XLRow *arg1;       /** lhs */
+        OpenXLSX::XLRow *arg2;       /** rhs */
+
+        olua_check_object(L, 1, &arg1, "openxlsx.XLRow");
+        olua_check_object(L, 2, &arg2, "openxlsx.XLRow");
+
+        // @operator(operator==) static bool operator==(const OpenXLSX::XLRow &lhs, const OpenXLSX::XLRow &rhs)
+        bool ret = (*arg1) == (*arg2);
+        int num_ret = olua_push_bool(L, ret);
+
+        olua_endinvoke(L);
+
+        return num_ret;
+    } catch (std::exception &e) {
+        lua_pushfstring(L, "OpenXLSX::XLRow::__eq(): %s", e.what());
+        luaL_error(L, olua_tostring(L, -1));
+        return 0;
+    }
+}
+
 static int _olua_fun_OpenXLSX_XLRow___gc(lua_State *L)
 {
     olua_startinvoke(L);
@@ -3645,6 +3800,56 @@ static int _olua_fun_OpenXLSX_XLRow___gc(lua_State *L)
     olua_endinvoke(L);
 
     return 0;
+}
+
+static int _olua_fun_OpenXLSX_XLRow___le(lua_State *L)
+{
+    try {
+        olua_startinvoke(L);
+
+        OpenXLSX::XLRow *arg1;       /** lhs */
+        OpenXLSX::XLRow *arg2;       /** rhs */
+
+        olua_check_object(L, 1, &arg1, "openxlsx.XLRow");
+        olua_check_object(L, 2, &arg2, "openxlsx.XLRow");
+
+        // @operator(operator<=) static bool operator<=(const OpenXLSX::XLRow &lhs, const OpenXLSX::XLRow &rhs)
+        bool ret = (*arg1) <= (*arg2);
+        int num_ret = olua_push_bool(L, ret);
+
+        olua_endinvoke(L);
+
+        return num_ret;
+    } catch (std::exception &e) {
+        lua_pushfstring(L, "OpenXLSX::XLRow::__le(): %s", e.what());
+        luaL_error(L, olua_tostring(L, -1));
+        return 0;
+    }
+}
+
+static int _olua_fun_OpenXLSX_XLRow___lt(lua_State *L)
+{
+    try {
+        olua_startinvoke(L);
+
+        OpenXLSX::XLRow *arg1;       /** lhs */
+        OpenXLSX::XLRow *arg2;       /** rhs */
+
+        olua_check_object(L, 1, &arg1, "openxlsx.XLRow");
+        olua_check_object(L, 2, &arg2, "openxlsx.XLRow");
+
+        // @operator(operator<) static bool operator<(const OpenXLSX::XLRow &lhs, const OpenXLSX::XLRow &rhs)
+        bool ret = (*arg1) < (*arg2);
+        int num_ret = olua_push_bool(L, ret);
+
+        olua_endinvoke(L);
+
+        return num_ret;
+    } catch (std::exception &e) {
+        lua_pushfstring(L, "OpenXLSX::XLRow::__lt(): %s", e.what());
+        luaL_error(L, olua_tostring(L, -1));
+        return 0;
+    }
 }
 
 static int _olua_fun_OpenXLSX_XLRow_cellCount(lua_State *L)
@@ -3747,22 +3952,22 @@ static int _olua_fun_OpenXLSX_XLRow_cells$3(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLRow_cells(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 0) {
+    if (num_args == 1) {
         // OpenXLSX::XLRowDataRange cells()
         return _olua_fun_OpenXLSX_XLRow_cells$1(L);
     }
 
-    if (num_args == 1) {
-        // if ((olua_is_integer(L, 2))) {
+    if (num_args == 2) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLRow")) && (olua_is_integer(L, 2))) {
             // OpenXLSX::XLRowDataRange cells(uint16_t cellCount)
             return _olua_fun_OpenXLSX_XLRow_cells$2(L);
         // }
     }
 
-    if (num_args == 2) {
-        // if ((olua_is_integer(L, 2)) && (olua_is_integer(L, 3))) {
+    if (num_args == 3) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLRow")) && (olua_is_integer(L, 2)) && (olua_is_integer(L, 3))) {
             // OpenXLSX::XLRowDataRange cells(uint16_t firstCell, uint16_t lastCell)
             return _olua_fun_OpenXLSX_XLRow_cells$3(L);
         // }
@@ -3983,7 +4188,10 @@ static int _olua_fun_OpenXLSX_XLRow_values(lua_State *L)
 static int _olua_cls_openxlsx_XLRow(lua_State *L)
 {
     oluacls_class<OpenXLSX::XLRow>(L, "openxlsx.XLRow");
+    oluacls_func(L, "__eq", _olua_fun_OpenXLSX_XLRow___eq);
     oluacls_func(L, "__gc", _olua_fun_OpenXLSX_XLRow___gc);
+    oluacls_func(L, "__le", _olua_fun_OpenXLSX_XLRow___le);
+    oluacls_func(L, "__lt", _olua_fun_OpenXLSX_XLRow___lt);
     oluacls_func(L, "cellCount", _olua_fun_OpenXLSX_XLRow_cellCount);
     oluacls_func(L, "cells", _olua_fun_OpenXLSX_XLRow_cells);
     oluacls_func(L, "descent", _olua_fun_OpenXLSX_XLRow_descent);
@@ -5025,22 +5233,22 @@ static int _olua_fun_OpenXLSX_XLWorksheet_cell$3(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLWorksheet_cell(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 1) {
-        if ((olua_is_string(L, 2))) {
+    if (num_args == 2) {
+        if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_string(L, 2))) {
             // OpenXLSX::XLCellAssignable cell(const std::string &ref)
             return _olua_fun_OpenXLSX_XLWorksheet_cell$1(L);
         }
 
-        // if ((olua_is_object(L, 2, "openxlsx.XLCellReference"))) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_object(L, 2, "openxlsx.XLCellReference"))) {
             // OpenXLSX::XLCell cell(const OpenXLSX::XLCellReference &ref)
             return _olua_fun_OpenXLSX_XLWorksheet_cell$2(L);
         // }
     }
 
-    if (num_args == 2) {
-        // if ((olua_is_integer(L, 2)) && (olua_is_integer(L, 3))) {
+    if (num_args == 3) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_integer(L, 2)) && (olua_is_integer(L, 3))) {
             // OpenXLSX::XLCell cell(uint32_t rowNumber, uint16_t columnNumber)
             return _olua_fun_OpenXLSX_XLWorksheet_cell$3(L);
         // }
@@ -5378,15 +5586,15 @@ static int _olua_fun_OpenXLSX_XLWorksheet_range$2(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLWorksheet_range(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 0) {
+    if (num_args == 1) {
         // OpenXLSX::XLCellRange range()
         return _olua_fun_OpenXLSX_XLWorksheet_range$1(L);
     }
 
-    if (num_args == 2) {
-        // if ((olua_is_object(L, 2, "openxlsx.XLCellReference")) && (olua_is_object(L, 3, "openxlsx.XLCellReference"))) {
+    if (num_args == 3) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_object(L, 2, "openxlsx.XLCellReference")) && (olua_is_object(L, 3, "openxlsx.XLCellReference"))) {
             // OpenXLSX::XLCellRange range(const OpenXLSX::XLCellReference &topLeft, const OpenXLSX::XLCellReference &bottomRight)
             return _olua_fun_OpenXLSX_XLWorksheet_range$2(L);
         // }
@@ -5522,22 +5730,22 @@ static int _olua_fun_OpenXLSX_XLWorksheet_rows$3(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLWorksheet_rows(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 0) {
+    if (num_args == 1) {
         // OpenXLSX::XLRowRange rows()
         return _olua_fun_OpenXLSX_XLWorksheet_rows$1(L);
     }
 
-    if (num_args == 1) {
-        // if ((olua_is_integer(L, 2))) {
+    if (num_args == 2) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_integer(L, 2))) {
             // OpenXLSX::XLRowRange rows(uint32_t rowCount)
             return _olua_fun_OpenXLSX_XLWorksheet_rows$2(L);
         // }
     }
 
-    if (num_args == 2) {
-        // if ((olua_is_integer(L, 2)) && (olua_is_integer(L, 3))) {
+    if (num_args == 3) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_integer(L, 2)) && (olua_is_integer(L, 3))) {
             // OpenXLSX::XLRowRange rows(uint32_t firstRow, uint32_t lastRow)
             return _olua_fun_OpenXLSX_XLWorksheet_rows$3(L);
         // }
@@ -5860,15 +6068,15 @@ static int _olua_fun_OpenXLSX_XLWorkbook_chartsheet$2(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLWorkbook_chartsheet(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 1) {
-        if ((olua_is_string(L, 2))) {
+    if (num_args == 2) {
+        if ((olua_is_object(L, 1, "openxlsx.XLWorkbook")) && (olua_is_string(L, 2))) {
             // OpenXLSX::XLChartsheet chartsheet(const std::string &sheetName)
             return _olua_fun_OpenXLSX_XLWorkbook_chartsheet$1(L);
         }
 
-        // if ((olua_is_integer(L, 2))) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorkbook")) && (olua_is_integer(L, 2))) {
             // OpenXLSX::XLChartsheet chartsheet(uint16_t index)
             return _olua_fun_OpenXLSX_XLWorkbook_chartsheet$2(L);
         // }
@@ -6260,15 +6468,15 @@ static int _olua_fun_OpenXLSX_XLWorkbook_sheet$2(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLWorkbook_sheet(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 1) {
-        if ((olua_is_integer(L, 2))) {
+    if (num_args == 2) {
+        if ((olua_is_object(L, 1, "openxlsx.XLWorkbook")) && (olua_is_integer(L, 2))) {
             // OpenXLSX::XLSheet sheet(uint16_t index)
             return _olua_fun_OpenXLSX_XLWorkbook_sheet$1(L);
         }
 
-        // if ((olua_is_string(L, 2))) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorkbook")) && (olua_is_string(L, 2))) {
             // OpenXLSX::XLSheet sheet(const std::string &sheetName)
             return _olua_fun_OpenXLSX_XLWorkbook_sheet$2(L);
         // }
@@ -6404,15 +6612,15 @@ static int _olua_fun_OpenXLSX_XLWorkbook_typeOfSheet$2(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLWorkbook_typeOfSheet(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 1) {
-        if ((olua_is_string(L, 2))) {
+    if (num_args == 2) {
+        if ((olua_is_object(L, 1, "openxlsx.XLWorkbook")) && (olua_is_string(L, 2))) {
             // OpenXLSX::XLSheetType typeOfSheet(const std::string &sheetName)
             return _olua_fun_OpenXLSX_XLWorkbook_typeOfSheet$1(L);
         }
 
-        // if ((olua_is_integer(L, 2))) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorkbook")) && (olua_is_integer(L, 2))) {
             // OpenXLSX::XLSheetType typeOfSheet(unsigned int index)
             return _olua_fun_OpenXLSX_XLWorkbook_typeOfSheet$2(L);
         // }
@@ -6501,15 +6709,15 @@ static int _olua_fun_OpenXLSX_XLWorkbook_worksheet$2(lua_State *L)
 
 static int _olua_fun_OpenXLSX_XLWorkbook_worksheet(lua_State *L)
 {
-    int num_args = lua_gettop(L) - 1;
+    int num_args = lua_gettop(L);
 
-    if (num_args == 1) {
-        if ((olua_is_string(L, 2))) {
+    if (num_args == 2) {
+        if ((olua_is_object(L, 1, "openxlsx.XLWorkbook")) && (olua_is_string(L, 2))) {
             // OpenXLSX::XLWorksheet worksheet(const std::string &sheetName)
             return _olua_fun_OpenXLSX_XLWorkbook_worksheet$1(L);
         }
 
-        // if ((olua_is_integer(L, 2))) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorkbook")) && (olua_is_integer(L, 2))) {
             // OpenXLSX::XLWorksheet worksheet(uint16_t index)
             return _olua_fun_OpenXLSX_XLWorkbook_worksheet$2(L);
         // }

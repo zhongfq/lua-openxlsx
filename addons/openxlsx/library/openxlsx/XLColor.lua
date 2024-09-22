@@ -5,6 +5,12 @@
 ---@class openxlsx.XLColor 
 local XLColor = {}
 
+---
+---@param lhs openxlsx.XLColor # 
+---@param rhs openxlsx.XLColor # 
+---@return boolean # 
+function XLColor.__eq(lhs, rhs) end
+
 ---@return any
 function XLColor:__gc() end
 

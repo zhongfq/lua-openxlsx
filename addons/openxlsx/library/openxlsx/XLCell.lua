@@ -6,6 +6,12 @@
 ---@field string string 
 local XLCell = {}
 
+---
+---@param lhs openxlsx.XLCell # 
+---@param rhs openxlsx.XLCell # 
+---@return boolean # 
+function XLCell.__eq(lhs, rhs) end
+
 ---@return any
 function XLCell:__gc() end
 

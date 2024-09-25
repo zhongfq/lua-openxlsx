@@ -9,6 +9,9 @@ local XLCellRange = {}
 ---@return any
 function XLCellRange:__gc() end
 
+---@return any
+function XLCellRange:__pairs() end
+
 function XLCellRange:clear() end
 
 ---Get the number of columns in the range.

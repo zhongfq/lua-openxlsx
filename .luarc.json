@@ -1,6 +1,6 @@
 {
   "diagnostics.disable": ["redundant-return-value"],
-  "workspace.library": ["olua"],
+  "workspace.library": ["olua", "addons"],
   "workspace.ignoreDir": [
     "olua/examples/lua"
   ],

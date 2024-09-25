@@ -40,9 +40,6 @@ end)
 
 entry "OpenXLSX::XLDocument"
 
-exclude_type "OpenXLSX::XLCellIterator"
-exclude_type "OpenXLSX::XLRowDataIterator"
-exclude_type "OpenXLSX::XLRowIterator"
 exclude_type "OpenXLSX::XMLDocument"
 exclude_type "OpenXLSX::XMLNode"
 exclude_type "std::basic_ostream"
@@ -60,8 +57,11 @@ typeconf "OpenXLSX::XLValueType"
 typeonly "OpenXLSX::XLCoordinates"
 
 typeconf "OpenXLSX::XLCellRange"
+    .iterator "OpenXLSX::XLCellIterator"
 typeconf "OpenXLSX::XLRowRange"
+    .iterator "OpenXLSX::XLRowIterator"
 typeconf "OpenXLSX::XLRowDataRange"
+    .iterator "OpenXLSX::XLRowDataIterator"
 typeconf "OpenXLSX::XLRowDataProxy"
 typeconf "OpenXLSX::IZipArchive"
 typeconf "OpenXLSX::XLCommand"

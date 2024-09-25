@@ -8,6 +8,9 @@ local XLRowDataRange = {}
 ---@return any
 function XLRowDataRange:__gc() end
 
+---@return any
+function XLRowDataRange:__pairs() end
+
 ---Get the size (length) of the range.
 ---@return integer # The size of the range.
 function XLRowDataRange:size() end

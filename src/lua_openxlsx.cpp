@@ -2667,10 +2667,22 @@ static int _olua_fun_OpenXLSX_XLCellReference___eq(lua_State *L)
         olua_startinvoke(L);
 
         OpenXLSX::XLCellReference *arg1;       /** lhs */
+        OpenXLSX::XLCellReference arg1_fromstring = OpenXLSX::XLCellReference("A1");       /** lhs */
         OpenXLSX::XLCellReference *arg2;       /** rhs */
+        OpenXLSX::XLCellReference arg2_fromstring = OpenXLSX::XLCellReference("A1");       /** rhs */
 
-        olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
-        olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+        if (olua_isstring(L, 1)) {
+            olua_check_string(L, 1, &arg1_fromstring);
+            arg1 = &arg1_fromstring;
+        } else {
+            olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
+        }
+        if (olua_isstring(L, 2)) {
+            olua_check_string(L, 2, &arg2_fromstring);
+            arg2 = &arg2_fromstring;
+        } else {
+            olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+        }
 
         // @operator(operator==) static bool operator==(const OpenXLSX::XLCellReference &lhs, const OpenXLSX::XLCellReference &rhs)
         bool ret = (*arg1) == (*arg2);
@@ -2707,10 +2719,22 @@ static int _olua_fun_OpenXLSX_XLCellReference___le(lua_State *L)
         olua_startinvoke(L);
 
         OpenXLSX::XLCellReference *arg1;       /** lhs */
+        OpenXLSX::XLCellReference arg1_fromstring = OpenXLSX::XLCellReference("A1");       /** lhs */
         OpenXLSX::XLCellReference *arg2;       /** rhs */
+        OpenXLSX::XLCellReference arg2_fromstring = OpenXLSX::XLCellReference("A1");       /** rhs */
 
-        olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
-        olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+        if (olua_isstring(L, 1)) {
+            olua_check_string(L, 1, &arg1_fromstring);
+            arg1 = &arg1_fromstring;
+        } else {
+            olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
+        }
+        if (olua_isstring(L, 2)) {
+            olua_check_string(L, 2, &arg2_fromstring);
+            arg2 = &arg2_fromstring;
+        } else {
+            olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+        }
 
         // @operator(operator<=) static bool operator<=(const OpenXLSX::XLCellReference &lhs, const OpenXLSX::XLCellReference &rhs)
         bool ret = (*arg1) <= (*arg2);
@@ -2732,10 +2756,22 @@ static int _olua_fun_OpenXLSX_XLCellReference___lt(lua_State *L)
         olua_startinvoke(L);
 
         OpenXLSX::XLCellReference *arg1;       /** lhs */
+        OpenXLSX::XLCellReference arg1_fromstring = OpenXLSX::XLCellReference("A1");       /** lhs */
         OpenXLSX::XLCellReference *arg2;       /** rhs */
+        OpenXLSX::XLCellReference arg2_fromstring = OpenXLSX::XLCellReference("A1");       /** rhs */
 
-        olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
-        olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+        if (olua_isstring(L, 1)) {
+            olua_check_string(L, 1, &arg1_fromstring);
+            arg1 = &arg1_fromstring;
+        } else {
+            olua_check_object(L, 1, &arg1, "openxlsx.XLCellReference");
+        }
+        if (olua_isstring(L, 2)) {
+            olua_check_string(L, 2, &arg2_fromstring);
+            arg2 = &arg2_fromstring;
+        } else {
+            olua_check_object(L, 2, &arg2, "openxlsx.XLCellReference");
+        }
 
         // @operator(operator<) static bool operator<(const OpenXLSX::XLCellReference &lhs, const OpenXLSX::XLCellReference &rhs)
         bool ret = (*arg1) < (*arg2);
@@ -5393,9 +5429,15 @@ static int _olua_fun_OpenXLSX_XLWorksheet_cell$2(lua_State *L)
 
         OpenXLSX::XLWorksheet *self = nullptr;
         OpenXLSX::XLCellReference *arg1;       /** ref */
+        OpenXLSX::XLCellReference arg1_fromstring = OpenXLSX::XLCellReference("A1");       /** ref */
 
         olua_to_object(L, 1, &self, "openxlsx.XLWorksheet");
-        olua_check_object(L, 2, &arg1, "openxlsx.XLCellReference");
+        if (olua_isstring(L, 2)) {
+            olua_check_string(L, 2, &arg1_fromstring);
+            arg1 = &arg1_fromstring;
+        } else {
+            olua_check_object(L, 2, &arg1, "openxlsx.XLCellReference");
+        }
 
         // OpenXLSX::XLCell cell(const OpenXLSX::XLCellReference &ref)
         OpenXLSX::XLCell ret = self->cell(*arg1);
@@ -5448,7 +5490,7 @@ static int _olua_fun_OpenXLSX_XLWorksheet_cell(lua_State *L)
             return _olua_fun_OpenXLSX_XLWorksheet_cell$1(L);
         }
 
-        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_object(L, 2, "openxlsx.XLCellReference"))) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_object(L, 2, "openxlsx.XLCellReference") || olua_is_string(L, 2))) {
             // OpenXLSX::XLCell cell(const OpenXLSX::XLCellReference &ref)
             return _olua_fun_OpenXLSX_XLWorksheet_cell$2(L);
         // }
@@ -5771,11 +5813,23 @@ static int _olua_fun_OpenXLSX_XLWorksheet_range$2(lua_State *L)
 
         OpenXLSX::XLWorksheet *self = nullptr;
         OpenXLSX::XLCellReference *arg1;       /** topLeft */
+        OpenXLSX::XLCellReference arg1_fromstring = OpenXLSX::XLCellReference("A1");       /** topLeft */
         OpenXLSX::XLCellReference *arg2;       /** bottomRight */
+        OpenXLSX::XLCellReference arg2_fromstring = OpenXLSX::XLCellReference("A1");       /** bottomRight */
 
         olua_to_object(L, 1, &self, "openxlsx.XLWorksheet");
-        olua_check_object(L, 2, &arg1, "openxlsx.XLCellReference");
-        olua_check_object(L, 3, &arg2, "openxlsx.XLCellReference");
+        if (olua_isstring(L, 2)) {
+            olua_check_string(L, 2, &arg1_fromstring);
+            arg1 = &arg1_fromstring;
+        } else {
+            olua_check_object(L, 2, &arg1, "openxlsx.XLCellReference");
+        }
+        if (olua_isstring(L, 3)) {
+            olua_check_string(L, 3, &arg2_fromstring);
+            arg2 = &arg2_fromstring;
+        } else {
+            olua_check_object(L, 3, &arg2, "openxlsx.XLCellReference");
+        }
 
         // OpenXLSX::XLCellRange range(const OpenXLSX::XLCellReference &topLeft, const OpenXLSX::XLCellReference &bottomRight)
         OpenXLSX::XLCellRange ret = self->range(*arg1, *arg2);
@@ -5801,7 +5855,7 @@ static int _olua_fun_OpenXLSX_XLWorksheet_range(lua_State *L)
     }
 
     if (num_args == 3) {
-        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_object(L, 2, "openxlsx.XLCellReference")) && (olua_is_object(L, 3, "openxlsx.XLCellReference"))) {
+        // if ((olua_is_object(L, 1, "openxlsx.XLWorksheet")) && (olua_is_object(L, 2, "openxlsx.XLCellReference") || olua_is_string(L, 2)) && (olua_is_object(L, 3, "openxlsx.XLCellReference") || olua_is_string(L, 3))) {
             // OpenXLSX::XLCellRange range(const OpenXLSX::XLCellReference &topLeft, const OpenXLSX::XLCellReference &bottomRight)
             return _olua_fun_OpenXLSX_XLWorksheet_range$2(L);
         // }

@@ -17,7 +17,7 @@ function XLWorksheet:__gc() end
 ---Get a pointer to the XLCell object for the given cell reference.
 ---\param ref An XLCellReference object with the address of the cell to get.
 ---\return A const reference to the requested XLCell object.
----@overload fun(self: openxlsx.XLWorksheet, ref: openxlsx.XLCellReference): openxlsx.XLCell
+---@overload fun(self: openxlsx.XLWorksheet, ref: openxlsx.XLCellReference|string): openxlsx.XLCell
 ---
 ---Get the cell at the given coordinates.
 ---\param rowNumber The row number (index base 1).
@@ -81,7 +81,7 @@ function XLWorksheet.new() end
 ---\param topLeft An XLCellReference object with the coordinates to the top left cell.
 ---\param bottomRight An XLCellReference object with the coordinates to the bottom right cell.
 ---\return A const XLCellRange object with the requested range.
----@overload fun(self: openxlsx.XLWorksheet, topLeft: openxlsx.XLCellReference, bottomRight: openxlsx.XLCellReference): openxlsx.XLCellRange
+---@overload fun(self: openxlsx.XLWorksheet, topLeft: openxlsx.XLCellReference|string, bottomRight: openxlsx.XLCellReference|string): openxlsx.XLCellRange
 function XLWorksheet:range() end
 
 ---Get the row with the given row number.

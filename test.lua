@@ -17,12 +17,9 @@ end
 local ref = XLCellReference.new("C1")
 print("#",ref, ref:address())
 print(sheet:cell(ref))
-print("#", ref, ref:row(), ref:column())
 
-
-local range = sheet:range(XLCellReference.new("A1"), XLCellReference.new("C3"))
-print(range, range:numColumns(), range:numRows())
-for _, v in pairs(range) do
+print("iterator range:")
+for _, v in pairs(sheet:range("A1", "C3")) do
     ---@cast v openxlsx.XLCell
     print(_, v:value().string)
 end

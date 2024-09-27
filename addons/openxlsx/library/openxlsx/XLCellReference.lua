@@ -6,8 +6,8 @@
 local XLCellReference = {}
 
 ---Helper function to check equality between two XLCellReferences.
----@param lhs openxlsx.XLCellReference # The first XLCellReference
----@param rhs openxlsx.XLCellReference # The second XLCellReference
+---@param lhs openxlsx.XLCellReference|string # The first XLCellReference
+---@param rhs openxlsx.XLCellReference|string # The second XLCellReference
 ---@return boolean # true if equal; otherwise false.
 function XLCellReference.__eq(lhs, rhs) end
 
@@ -15,14 +15,14 @@ function XLCellReference.__eq(lhs, rhs) end
 function XLCellReference:__gc() end
 
 ---Helper function to check if one XLCellReference is smaller than or equal to another.
----@param lhs openxlsx.XLCellReference # The first XLCellReference
----@param rhs openxlsx.XLCellReference # The second XLCellReference
+---@param lhs openxlsx.XLCellReference|string # The first XLCellReference
+---@param rhs openxlsx.XLCellReference|string # The second XLCellReference
 ---@return boolean # true if lhs <= rhs; otherwise false
 function XLCellReference.__le(lhs, rhs) end
 
 ---Helper function to check if one XLCellReference is smaller than another.
----@param lhs openxlsx.XLCellReference # The first XLCellReference
----@param rhs openxlsx.XLCellReference # The second XLCellReference
+---@param lhs openxlsx.XLCellReference|string # The first XLCellReference
+---@param rhs openxlsx.XLCellReference|string # The second XLCellReference
 ---@return boolean # true if lhs < rhs; otherwise false.
 function XLCellReference.__lt(lhs, rhs) end
 

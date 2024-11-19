@@ -7,7 +7,6 @@
 ---and XLWorksheet.
 ---@class openxlsx.XLXmlData 
 ---@field parentDoc openxlsx.XLDocument Access the parent XLDocument object. \return A pointer to the parent XLDocument object.
----@field rawData string Get the raw data for the underlying XML document. This function will retrieve the raw XML text data from the underlying XMLDocument object. This will mainly be used when saving data to the .xlsx package using the save function in the XLDocument class. \return A std::string with the raw XML text data.
 ---@field xmlID string Retrieve the relationship ID of the XML file. \return A std::string with the relationship ID.
 ---@field xmlPath string Retrieve the path of the XML data in the .xlsx zip archive. \return A std::string with the path.
 ---@field xmlType openxlsx.XLContentType Retrieve the type represented by the XML data. \return A XLContentType getValue representing the type.
@@ -23,8 +22,10 @@ function XLXmlData:getParentDoc() end
 ---Get the raw data for the underlying XML document. This function will retrieve the raw XML text data
 ---from the underlying XMLDocument object. This will mainly be used when saving data to the .xlsx package
 ---using the save function in the XLDocument class.
+---@param savingDeclaration openxlsx.XLXmlSavingDeclaration # @optional specify an XML saving declaration to use
 ---@return string # A std::string with the raw XML text data.
-function XLXmlData:getRawData() end
+---@overload fun(self: openxlsx.XLXmlData): string
+function XLXmlData:getRawData(savingDeclaration) end
 
 ---Retrieve the relationship ID of the XML file.
 ---@return string # A std::string with the relationship ID.

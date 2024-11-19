@@ -52,6 +52,16 @@ function XLRow:cells() end
 ---@return number # The row descent.
 function XLRow:descent() end
 
+---Find a cell at columNumber, or return an empty cell
+---@param columNumber integer # The column at which to check for an existing cell
+---@return openxlsx.XLCell # An XLCell object (that bool-evaluates to false if cell was not found)
+function XLRow:findCell(columNumber) end
+
+---Get the array index of xl/styles.xml:<styleSheet>:<cellXfs> for the style assigned to the row.
+---This value is stored in the row attributes like so: s="2"
+---@return integer # s The index of the applicable format style
+function XLRow:format() end
+
 ---Get the height of the row.
 ---@return number # the row height.
 function XLRow:height() end
@@ -72,6 +82,11 @@ function XLRow:rowNumber() end
 ---in the current row to the typographical baseline of the cell content.
 ---@param descent number # The row descent.
 function XLRow:setDescent(descent) end
+
+---Set the row style as a reference to the array index of xl/styles.xml:<styleSheet>:<cellXfs>
+---@param cellFormatIndex integer # The style to set, corresponding to the index of XLStyles::cellStyles()
+---@return boolean # s true on success, false on failure
+function XLRow:setFormat(cellFormatIndex) end
 
 ---Set the height of the row.
 ---@param height number # The height of the row.

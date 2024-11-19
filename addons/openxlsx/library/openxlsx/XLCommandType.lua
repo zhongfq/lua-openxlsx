@@ -9,6 +9,7 @@ local VALUE
 local XLCommandType = {
     AddChartsheet = 10,
     AddSharedStrings = 8,
+    AddStyles = 13,
     AddWorksheet = 9,
     CheckAndFixCoreProperties = 6,
     CheckAndFixExtendedProperties = 7,
